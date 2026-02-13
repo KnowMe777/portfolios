@@ -1,9 +1,1226 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio 2</title>
+    <title>Hanan Khan Portfolio</title>
+
+    <!-- using tailwind CDN version -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- using font awesome for icons -->
+    <script
+      src="https://kit.fontawesome.com/e831457755.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
-  <body></body>
+
+  <body class="bg-black font-sans">
+    <!-- navbar -->
+    <nav
+      class="flex justify-between items-center bg-black p-4 px-6 md:px-14 fixed top-0 left-0 right-0 z-50"
+    >
+      <!-- div for logo and name -->
+      <div class="flex items-center gap-3">
+        <div class="relative w-10 h-10 flex items-center justify-center">
+          <svg
+            viewBox="0 0 100 100"
+            class="absolute inset-0 w-full h-full fill-none stroke-[#FE9A00]"
+            style="stroke-width: 8"
+          >
+            <path
+              d="M50 5 L89 27.5 L89 72.5 L50 95 L11 72.5 L11 27.5 Z"
+              stroke-linejoin="round"
+              stroke-linecap="round"
+            />
+          </svg>
+          <span
+            class="relative z-10 text-[#FE9A00] text-xl font-semibold tracking-wide"
+            >HK</span
+          >
+        </div>
+        <div class="flex flex-col">
+          <h1 class="text-xl font-semibold text-[#FE9A00] tracking-wide">
+            HANAN KHAN
+          </h1>
+          <p class="text-sm font-medium text-[#8B5E14] tracking-wide">
+            ELITE DEVELOPER
+          </p>
+        </div>
+      </div>
+
+      <!-- desktop Links -->
+      <div class="hidden md:flex gap-8 items-center">
+        <a
+          href="#home"
+          class="text-gray-400 hover:text-[#FE9A00] font-medium transition-colors"
+          >Home</a
+        >
+        <a
+          href="#about"
+          class="text-gray-400 hover:text-[#FE9A00] font-medium transition-colors"
+          >About</a
+        >
+        <a
+          href="#skills"
+          class="text-gray-400 hover:text-[#FE9A00] font-medium transition-colors"
+          >Skills</a
+        >
+        <a
+          href="#projects"
+          class="text-gray-400 hover:text-[#FE9A00] font-medium transition-colors"
+          >Projects</a
+        >
+        <a
+          href="#education"
+          class="text-gray-400 hover:text-[#FE9A00] font-medium transition-colors"
+          >Education</a
+        >
+        <a
+          href="#testimonials"
+          class="text-gray-400 hover:text-[#FE9A00] font-medium transition-colors"
+          >Testimonials</a
+        >
+        <a
+          href="#contact"
+          class="text-gray-400 hover:text-[#FE9A00] font-medium transition-colors"
+          >Contact</a
+        >
+        <button
+          type="button"
+          class="text-black font-semibold bg-gradient-to-r from-[#FE9A00] to-[#F0B100] py-1 px-3 rounded-sm shadow-md shadow-purple-700/50 transition-transform hover:scale-105 duration-200"
+        >
+          Hire Me
+        </button>
+      </div>
+
+      <!-- mobile hamburger -->
+      <div class="md:hidden">
+        <input type="checkbox" id="menu-toggle" class="hidden peer" />
+        <label
+          for="menu-toggle"
+          class="cursor-pointer space-y-1.5 block"
+          aria-label="Toggle menu"
+        >
+          <span class="block h-0.5 w-6 bg-gray-400"></span>
+          <span class="block h-0.5 w-6 bg-gray-400"></span>
+          <span class="block h-0.5 w-6 bg-gray-400"></span>
+        </label>
+
+        <div
+          class="fixed top-0 right-[-100%] h-full w-72 bg-black shadow-2xl p-8 flex flex-col gap-6 transition-all duration-300 peer-checked:right-0 z-[60]"
+        >
+          <label
+            for="menu-toggle"
+            class="text-[#FE9A00] text-2xl cursor-pointer self-end"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </label>
+          <a
+            href="#home"
+            class="text-lg text-[#FE9A00] pb-2 hover:text-[#F0B100]"
+            >Home</a
+          >
+          <a
+            href="#about"
+            class="text-lg text-[#FE9A00] pb-2 hover:text-[#F0B100]"
+            >About</a
+          >
+          <a
+            href="#skills"
+            class="text-lg text-[#FE9A00] pb-2 hover:text-[#F0B100]"
+            >Skills</a
+          >
+          <a
+            href="#projects"
+            class="text-lg text-[#FE9A00] pb-2 hover:text-[#F0B100]"
+            >Projects</a
+          >
+          <a
+            href="#education"
+            class="text-lg text-[#FE9A00] pb-2 hover:text-[#F0B100]"
+            >Education</a
+          >
+          <a
+            href="#testimonials"
+            class="text-lg text-[#FE9A00] pb-2 hover:text-[#F0B100]"
+            >Testimonials</a
+          >
+          <a
+            href="#contact"
+            class="text-lg text-[#FE9A00] pb-2 hover:text-[#F0B100]"
+            >Contact</a
+          >
+          <button
+            type="button"
+            class="bg-gradient-to-r from-[#FE9A00] to-[#F0B100] text-black p-3 rounded-lg mt-4 shadow-md shadow-purple-700/50"
+          >
+            Hire Me
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- main section -->
+    <section
+      id="home"
+      class="flex flex-col md:flex-row items-center justify-center min-h-screen pt-24 pb-12 px-6 md:px-20 gap-12"
+    >
+      <!-- div for text -->
+      <div class="flex-1 text-center md:text-left">
+        <div
+          class="flex items-center justify-center bg-[#FE9A00]/20 w-48 h-10 rounded-lg gap-2 border-l-4 border-[#FE9A00] mb-5"
+        >
+          <i class="fa-solid fa-crown text-[#FE9A00]"></i>
+          <p class="text-[#FE9A00]">PREMIUM QUAITY</p>
+        </div>
+        <h1
+          class="text-4xl md:text-5xl mb-2 text-left text-white font-extrabold tracking-wide"
+        >
+          HANAN
+        </h1>
+        <h1
+          class="text-4xl md:text-5xl mb-2 text-left text-[#FE9A00] font-extrabold tracking-wide"
+        >
+          KHAN
+        </h1>
+        <h3
+          class="font-robotoMono text-gray-400 text-xl mb-4 text-left ml-14 tracking-widest"
+        >
+          FULL STACK DEVELOPER
+        </h3>
+        <p
+          class="text-gray-400 text-left text-sm md:text-base mb-8 max-w-2xl mx-auto md:mx-0"
+        >
+          Delivering excellence in every line of code. Transforming complex
+          challenges into elegant solutions with precision, expertise, and a
+          commitment to quality that sets industry standard.
+        </p>
+
+        <!-- div for buttons -->
+        <div
+          class="flex flex-col md:flex-row gap-4 justify-center md:justify-start"
+        >
+          <button
+            class="bg-[#FE9A00] text-black px-8 py-3 rounded-lg shadow-xl hover:scale-105 transition-transform duration-200"
+          >
+            VIEW PORTFOLIO
+          </button>
+          <button
+            class="border-2 border-[#FE9A00] text-[#FE9A00] px-8 py-3 rounded-lg hover:scale-105 transition-transform duration-200"
+          >
+            CONTACT
+          </button>
+        </div>
+
+        <!-- div for socials -->
+        <div class="flex mt-7 items-center gap-5">
+          <a
+            href="https://github.com/KnowMe777"
+            class="text-[#FE9A00] border-2 rounded-md border-[#FE9A00] p-2 transition-transform hover:scale-105 duration-200"
+          >
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/5-hanan-khan/"
+            class="text-[#FE9A00] border-2 rounded-md border-[#FE9A00] p-2 transition-transform hover:scale-105 duration-200"
+          >
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a
+            href="https://x.com/"
+            class="text-[#FE9A00] border-2 rounded-md border-[#FE9A00] p-2 transition-transform hover:scale-105 duration-200"
+          >
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- div for pfp -->
+      <div class="relative flex items-center justify-center">
+        <!-- outer div with border -->
+        <div
+          class="h-48 w-48 md:h-80 md:w-80 rounded-lg bg-[#FE9A00] p-1 shadow-2xl"
+        >
+          <!-- inner div for pic -->
+          <div
+            class="h-full w-full bg-white rounded-lg flex items-center justify-center overflow-hidden"
+          ></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- stats cards -->
+    <section
+      class="px-8 md:px-20 py-10 grid grid-cols-2 md:grid-cols-4 gap-6 text-center"
+    >
+      <!-- card1 -->
+      <div class="border border-[#FE9A00] p-6 rounded">
+        <label class="text-[#FE9A00] border-2 border-[#FE9A00] p-3 rounded-full"
+          ><i class="fa-solid fa-suitcase"></i
+        ></label>
+        <h3 class="text-[#FE9A00] text-2xl font-bold mt-3">50+</h3>
+        <p class="text-gray-400 text-sm">Projects Completed</p>
+      </div>
+
+      <!-- card2 -->
+      <div class="border border-[#FE9A00] p-6 rounded">
+        <label class="text-[#FE9A00] border-2 border-[#FE9A00] p-3 rounded-full"
+          ><i class="fa-solid fa-user"></i
+        ></label>
+        <h3 class="text-[#FE9A00] text-2xl font-bold mt-3">30+</h3>
+        <p class="text-gray-400 text-sm">Happy Clients</p>
+      </div>
+
+      <!-- card3 -->
+      <div class="border border-[#FE9A00] p-6 rounded">
+        <label class="text-[#FE9A00] border-2 border-[#FE9A00] p-3 rounded-full"
+          ><i class="fa-solid fa-award"></i
+        ></label>
+        <h3 class="text-[#FE9A00] text-2xl font-bold mt-3">15+</h3>
+        <p class="text-gray-400 text-sm">Awards Won</p>
+      </div>
+
+      <!-- card4 -->
+      <div class="border border-[#FE9A00] p-6 rounded">
+        <label class="text-[#FE9A00] border-2 border-[#FE9A00] p-2 rounded-full"
+          ><i class="fa-solid fa-arrow-trend-up"></i
+        ></label>
+        <h3 class="text-[#FE9A00] text-2xl font-bold mt-3">5+</h3>
+        <p class="text-gray-400 text-sm">Years Experience</p>
+      </div>
+    </section>
+
+    <!-- about section -->
+    <section id="about" class="px-8 md:px-20 py-16 md:py-32">
+      <!-- top div for headings -->
+      <div class="flex flex-col items-center">
+        <div
+          class="flex items-center justify-center bg-[#FE9A00]/20 w-48 h-10 rounded-lg gap-2 border-l-4 border-[#FE9A00] mb-5"
+        >
+          <i class="fa-solid fa-shield text-[#FE9A00]"></i>
+          <p class="text-[#FE9A00]">ABOUT</p>
+        </div>
+
+        <h2 class="text-3xl font-bold mb-10 text-white tracking-widest">
+          EXPERTISE &
+          <span class="text-[#FE9A00] tracking-widest pb-5">EXCELLENCE</span>
+        </h2>
+      </div>
+
+      <!-- bottom div for mission and skills -->
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <!-- left div for mission -->
+        <div
+          class="flex flex-col gap-6 w-full p-5 border border-[#FE9A00] rounded-xl shadow-[0_35px_30px_5px_rgba(254,154,0,0.45)]"
+        >
+          <div class="flex gap-2 items-center">
+            <label class="text-[#FE9A00] text-3xl">
+              <i class="fa-solid fa-bullseye"></i>
+            </label>
+            <h1 class="text-white font-bold text-3xl">My Mission</h1>
+          </div>
+
+          <p class="text-gray-400">
+            With over 5 years of elite experience, I specialize in crafting
+            premium digital solutions that combine technical excellence with
+            exceptional user experience.
+            <br /><br />
+            Every project I undertake is approached with meticulous attention to
+            detail, ensuring world-class quality and performance.
+            <br /><br />
+            My commitment to excellence drives me to continuously innovate and
+            deliver solutions that set new standards in the industry.
+          </p>
+        </div>
+
+        <!-- right div for skills cards -->
+        <div class="flex flex-col gap-6 w-full">
+          <!-- card 1 -->
+          <div
+            class="w-full rounded-2xl border-l-4 border-[#FE9A00] p-6 flex items-center gap-4 hover:shadow-md transition"
+          >
+            <div class="text-[#FE9A00] text-2xl">
+              <i class="fa-solid fa-globe"></i>
+            </div>
+            <div>
+              <h3 class="text-white font-semibold">Web Development</h3>
+              <p class="text-gray-400 text-sm">Enterprise-grade applications</p>
+            </div>
+          </div>
+
+          <!-- card 2 -->
+          <div
+            class="w-full rounded-2xl border-l-4 border-[#FE9A00] p-6 flex items-center gap-4 hover:shadow-md transition"
+          >
+            <div class="text-[#FE9A00] text-2xl">
+              <i class="fa-solid fa-mobile"></i>
+            </div>
+            <div>
+              <h3 class="text-white font-semibold">Mobile Solutions</h3>
+              <p class="text-gray-400 text-sm">Native & Hybrid Platforms</p>
+            </div>
+          </div>
+
+          <!-- card 3 -->
+          <div
+            class="w-full rounded-2xl border-l-4 border-[#FE9A00] p-6 flex items-center gap-4 hover:shadow-md transition"
+          >
+            <div class="text-[#FE9A00] text-2xl">
+              <i class="fa-regular fa-cloud"></i>
+            </div>
+            <div>
+              <h3 class="text-white font-semibold">Cloud Architecture</h3>
+              <p class="text-gray-400 text-sm">Scalable Infrastructure</p>
+            </div>
+          </div>
+
+          <!-- card 4 -->
+          <div
+            class="w-full rounded-2xl border-l-4 border-[#FE9A00] p-6 flex items-center gap-4 hover:shadow-md transition"
+          >
+            <div class="text-[#FE9A00] text-2xl">
+              <i class="fa-solid fa-microchip"></i>
+            </div>
+            <div>
+              <h3 class="text-white font-semibold">API Systems</h3>
+              <p class="text-gray-400 text-sm">High Performance Backends</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- skills secrion -->
+    <section id="skills" class="px-8 md:px-20 py-16 md:py-32">
+      <!-- top div for headings -->
+      <div class="flex flex-col items-center">
+        <div
+          class="flex items-center justify-center bg-[#FE9A00]/20 w-48 h-10 rounded-lg gap-2 border-l-4 border-[#FE9A00] mb-5"
+        >
+          <i class="fa-solid fa-bolt-lightning text-[#FE9A00]"></i>
+          <p class="text-[#FE9A00]">SKILLS</p>
+        </div>
+
+        <h2 class="text-3xl font-bold mb-10 text-white tracking-widest">
+          TECHNICAL
+          <span class="text-[#FE9A00] tracking-widest pb-5">MASTERY</span>
+        </h2>
+      </div>
+
+      <!-- bottom div for cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <!-- card 1 -->
+        <div
+          class="border border-[#FE9A00] rounded-lg flex flex-col justify-center gap-2 p-2"
+        >
+          <div class="flex justify-between">
+            <!-- div for icon and title -->
+            <div class="flex items-center gap-3">
+              <label
+                class="text-[#FE9A00] p-2 border-2 border-[#FE9A00] rounded-lg"
+                ><i class="fa-solid fa-code"></i
+              ></label>
+              <div>
+                <h1 class="text-white font-bold">React & Next.JS</h1>
+                <p class="text-[#FE9A00] text-sm">FRONTEND</p>
+              </div>
+            </div>
+            <!-- percentage -->
+            <h1 class="text-[#FE9A00] font-bold text-2xl">95%</h1>
+          </div>
+
+          <!-- progress bar -->
+          <div class="mt-6">
+            <div class="w-full h-2 bg-[#1E293B] rounded-full overflow-hidden">
+              <div
+                class="h-full rounded-full bg-[#FE9A00] transition-all duration-700"
+                style="width: 95%"
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- card 2 -->
+        <div
+          class="border border-[#FE9A00] rounded-lg flex flex-col justify-center gap-2 p-2"
+        >
+          <div class="flex justify-between">
+            <!-- div for icon and title -->
+            <div class="flex items-center gap-3">
+              <label
+                class="text-[#FE9A00] p-2 border-2 border-[#FE9A00] rounded-lg"
+                ><i class="fa-solid fa-server"></i
+              ></label>
+              <div>
+                <h1 class="text-white font-bold">Node.JS & Express</h1>
+                <p class="text-[#FE9A00] text-sm">BACKEND</p>
+              </div>
+            </div>
+            <!-- percentage -->
+            <h1 class="text-[#FE9A00] font-bold text-2xl">90%</h1>
+          </div>
+
+          <!-- progress bar -->
+          <div class="mt-6">
+            <div class="w-full h-2 bg-[#1E293B] rounded-full overflow-hidden">
+              <div
+                class="h-full rounded-full bg-[#FE9A00] transition-all duration-700"
+                style="width: 90%"
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- card 3 -->
+        <div
+          class="border border-[#FE9A00] rounded-lg flex flex-col justify-center gap-2 p-2"
+        >
+          <div class="flex justify-between">
+            <!-- div for icon and title -->
+            <div class="flex items-center gap-3">
+              <label
+                class="text-[#FE9A00] p-2 border-2 border-[#FE9A00] rounded-lg"
+                ><i class="fa-solid fa-database"></i
+              ></label>
+              <div>
+                <h1 class="text-white font-bold">PostgreSQL & MongoDB</h1>
+                <p class="text-[#FE9A00] text-sm">DATABASE</p>
+              </div>
+            </div>
+            <!-- percentage -->
+            <h1 class="text-[#FE9A00] font-bold text-2xl">85%</h1>
+          </div>
+
+          <!-- progress bar -->
+          <div class="mt-6">
+            <div class="w-full h-2 bg-[#1E293B] rounded-full overflow-hidden">
+              <div
+                class="h-full rounded-full bg-[#FE9A00] transition-all duration-700"
+                style="width: 85%"
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- card 4 -->
+        <div
+          class="border border-[#FE9A00] rounded-lg flex flex-col justify-center gap-2 p-2"
+        >
+          <div class="flex justify-between">
+            <!-- div for icon and title -->
+            <div class="flex items-center gap-3">
+              <label
+                class="text-[#FE9A00] p-2 border-2 border-[#FE9A00] rounded-lg"
+                ><i class="fa-regular fa-cloud"></i
+              ></label>
+              <div>
+                <h1 class="text-white font-bold">AWS & Docker</h1>
+                <p class="text-[#FE9A00] text-sm">DEVOPS</p>
+              </div>
+            </div>
+            <!-- percentage -->
+            <h1 class="text-[#FE9A00] font-bold text-2xl">88%</h1>
+          </div>
+
+          <!-- progress bar -->
+          <div class="mt-6">
+            <div class="w-full h-2 bg-[#1E293B] rounded-full overflow-hidden">
+              <div
+                class="h-full rounded-full bg-[#FE9A00] transition-all duration-700"
+                style="width: 88%"
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- card 5 -->
+        <div
+          class="border border-[#FE9A00] rounded-lg flex flex-col justify-center gap-2 p-2"
+        >
+          <div class="flex justify-between">
+            <!-- div for icon and title -->
+            <div class="flex items-center gap-3">
+              <label
+                class="text-[#FE9A00] p-2 border-2 border-[#FE9A00] rounded-lg"
+                ><i class="fa-solid fa-mobile"></i
+              ></label>
+              <div>
+                <h1 class="text-white font-bold">React Native</h1>
+                <p class="text-[#FE9A00] text-sm">MOBILE</p>
+              </div>
+            </div>
+            <!-- percentage -->
+            <h1 class="text-[#FE9A00] font-bold text-2xl">82%</h1>
+          </div>
+
+          <!-- progress bar -->
+          <div class="mt-6">
+            <div class="w-full h-2 bg-[#1E293B] rounded-full overflow-hidden">
+              <div
+                class="h-full rounded-full bg-[#FE9A00] transition-all duration-700"
+                style="width: 82%"
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- card 6 -->
+        <div
+          class="border border-[#FE9A00] rounded-lg flex flex-col justify-center gap-2 p-2"
+        >
+          <div class="flex justify-between">
+            <!-- div for icon and title -->
+            <div class="flex items-center gap-3">
+              <label
+                class="text-[#FE9A00] p-2 border-2 border-[#FE9A00] rounded-lg"
+                ><i class="fa-brands fa-figma"></i
+              ></label>
+              <div>
+                <h1 class="text-white font-bold">UI/UX Design</h1>
+                <p class="text-[#FE9A00] text-sm">DESIGN</p>
+              </div>
+            </div>
+            <!-- percentage -->
+            <h1 class="text-[#FE9A00] font-bold text-2xl">87%</h1>
+          </div>
+
+          <!-- progress bar -->
+          <div class="mt-6">
+            <div class="w-full h-2 bg-[#1E293B] rounded-full overflow-hidden">
+              <div
+                class="h-full rounded-full bg-[#FE9A00] transition-all duration-700"
+                style="width: 87%"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- projects section -->
+    <section id="projects" class="px-8 md:px-20 py-16 md:py-32">
+      <!-- top div for headings -->
+      <div class="flex flex-col items-center">
+        <div
+          class="flex items-center justify-center bg-[#FE9A00]/20 w-48 h-10 rounded-lg gap-2 border-l-4 border-[#FE9A00] mb-5"
+        >
+          <i class="fa-solid fa-shield text-[#FE9A00]"></i>
+          <p class="text-[#FE9A00]">PORTFOLIO</p>
+        </div>
+
+        <h2 class="text-3xl font-bold mb-10 text-white tracking-widest">
+          PREMIUM
+          <span class="text-[#FE9A00] tracking-widest pb-5">PROJECTS</span>
+        </h2>
+      </div>
+
+      <!-- div for project cards -->
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+        <!-- card 1 -->
+        <div
+          class="border border-[#FE9A00] rounded-md flex flex-col items-start gap-5 p-3"
+        >
+          <img
+            src="images/messaging.png"
+            alt="messaging image"
+            class="border-none rounded-md transition-transform hover:scale-105 duration-500"
+          />
+          <div>
+            <h1 class="text-white font-bold text-xl">Messaging Web App</h1>
+            <p class="text-gray-400 text-sm">
+              Fast, secure, real-time web app for seamless messaging and
+              communication.
+            </p>
+            <div class="flex gap-2 mt-2">
+              <p
+                class="text-[#FE9A00] p-1 rounded-md bg-[#FE9A00]/20 border border-[#FE9A00]"
+              >
+                React
+              </p>
+              <p
+                class="text-[#FE9A00] p-1 rounded-md bg-[#FE9A00]/20 border border-[#FE9A00]"
+              >
+                Node.js
+              </p>
+              <p
+                class="text-[#FE9A00] p-1 rounded-md bg-[#FE9A00]/20 border border-[#FE9A00]"
+              >
+                PostgreSQL
+              </p>
+              <p
+                class="text-[#FE9A00] p-1 rounded-md bg-[#FE9A00]/20 border border-[#FE9A00]"
+              >
+                Websockets
+              </p>
+            </div>
+            <p class="text-[#FE9A00] p-1 mt-2">
+              VIEW DETAILS <i class="fa-solid fa-share"></i>
+            </p>
+          </div>
+        </div>
+
+        <!-- card 2 -->
+        <div
+          class="border border-[#FE9A00] rounded-md flex flex-col items-start gap-5 p-3"
+        >
+          <img
+            src="images/ecommerce.png"
+            alt="ecommerce image"
+            class="border-none rounded-md transition-transform hover:scale-105 duration-500"
+          />
+          <div>
+            <h1 class="text-white font-bold text-xl">E-Commerce Platform</h1>
+            <p class="text-gray-400 text-sm">
+              Full stack online store with payment integration and admin
+              dashboard
+            </p>
+            <div class="flex gap-2 mt-2">
+              <p
+                class="text-[#FE9A00] p-1 rounded-md bg-[#FE9A00]/20 border border-[#FE9A00]"
+              >
+                React
+              </p>
+              <p
+                class="text-[#FE9A00] p-1 rounded-md bg-[#FE9A00]/20 border border-[#FE9A00]"
+              >
+                Node.js
+              </p>
+              <p
+                class="text-[#FE9A00] p-1 rounded-md bg-[#FE9A00]/20 border border-[#FE9A00]"
+              >
+                MongoDB
+              </p>
+              <p
+                class="text-[#FE9A00] p-1 rounded-md bg-[#FE9A00]/20 border border-[#FE9A00]"
+              >
+                Stripe
+              </p>
+            </div>
+            <p class="text-[#FE9A00] p-1 mt-2">
+              VIEW DETAILS <i class="fa-solid fa-share"></i>
+            </p>
+          </div>
+        </div>
+
+        <!-- card 3 -->
+        <div
+          class="border border-[#FE9A00] rounded-md flex flex-col items-start gap-5 p-3"
+        >
+          <img
+            src="images/news.png"
+            alt="news image"
+            class="border-none rounded-md transition-transform hover:scale-105 duration-500"
+          />
+          <div>
+            <h1 class="text-white font-bold text-xl">News App</h1>
+            <p class="text-gray-400 text-sm">
+              Fast, reliable news app delivering real-time global updates.
+            </p>
+            <div class="flex gap-2 mt-2">
+              <p
+                class="text-[#FE9A00] p-1 rounded-md bg-[#FE9A00]/20 border border-[#FE9A00]"
+              >
+                React
+              </p>
+              <p
+                class="text-[#FE9A00] p-1 rounded-md bg-[#FE9A00]/20 border border-[#FE9A00]"
+              >
+                Node.js
+              </p>
+              <p
+                class="text-[#FE9A00] p-1 rounded-md bg-[#FE9A00]/20 border border-[#FE9A00]"
+              >
+                Express
+              </p>
+              <p
+                class="text-[#FE9A00] p-1 rounded-md bg-[#FE9A00]/20 border border-[#FE9A00]"
+              >
+                MongoDB
+              </p>
+            </div>
+            <p class="text-[#FE9A00] p-1 mt-2">
+              VIEW DETAILS <i class="fa-solid fa-share"></i>
+            </p>
+          </div>
+        </div>
+
+        <!-- card 4 -->
+        <div
+          class="border border-[#FE9A00] rounded-md flex flex-col items-start gap-5 p-3"
+        >
+          <img
+            src="images/bank.png"
+            alt="messaging image"
+            class="border-none rounded-md transition-transform hover:scale-105 duration-500"
+          />
+          <div>
+            <h1 class="text-white font-bold text-xl">Banking App</h1>
+            <p class="text-gray-400 text-sm">
+              Secure, fast, and intuitive app for managing all your finances.
+            </p>
+            <div class="flex gap-2 mt-2">
+              <p
+                class="text-[#FE9A00] p-1 rounded-md bg-[#FE9A00]/20 border border-[#FE9A00]"
+              >
+                React
+              </p>
+              <p
+                class="text-[#FE9A00] p-1 rounded-md bg-[#FE9A00]/20 border border-[#FE9A00]"
+              >
+                Node.js
+              </p>
+              <p
+                class="text-[#FE9A00] p-1 rounded-md bg-[#FE9A00]/20 border border-[#FE9A00]"
+              >
+                PostgreSQL
+              </p>
+              <p
+                class="text-[#FE9A00] p-1 rounded-md bg-[#FE9A00]/20 border border-[#FE9A00]"
+              >
+                Stripe
+              </p>
+            </div>
+            <p class="text-[#FE9A00] p-1 mt-2">
+              VIEW DETAILS <i class="fa-solid fa-share"></i>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- section for education -->
+    <section id="education" class="px-8 md:px-20 py-16 md:py-32">
+      <!-- top div for headings -->
+      <div class="flex flex-col items-center">
+        <div
+          class="flex items-center justify-center bg-[#FE9A00]/20 w-48 h-10 rounded-lg gap-2 border-l-4 border-[#FE9A00] mb-5"
+        >
+          <i class="fa-solid fa-award text-[#FE9A00]"></i>
+          <p class="text-[#FE9A00]">EDUCATION</p>
+        </div>
+
+        <h2 class="text-3xl font-bold mb-10 text-white tracking-widest">
+          ACADEMIC
+          <span class="text-[#FE9A00] tracking-widest pb-5">EXCELLENCE</span>
+        </h2>
+      </div>
+
+      <!-- div for education cards -->
+
+      <div>
+        <!-- div for first card -->
+        <div class="flex items-start">
+          <!-- card1 -->
+          <div
+            class="p-6 rounded-xl border border-[#FE9A00] shadow-[10px_10px_30px_5px_rgba(254,154,0,0.45)]"
+          >
+            <h3 class="text-lg text-white font-semibold mt-1 text-gray-800">
+              Bachelor of Science in Computer Science
+            </h3>
+            <p class="text-gray-400">Stanford University, California</p>
+            <p class="text-gray-400 text-sm mt-4">
+              Focus on Web technologies and System Design.
+            </p>
+            <div class="mt-4 flex justify-between items-center pt-4">
+              <span
+                class="text-xs font-robotoMono font-bold text-[#FE9A00] uppercase tracking-wider"
+                >2018 - 2022</span
+              >
+              <span
+                class="text-sm p-2 border border-[#FE9A00] rounded-md text-[#FE9A00]"
+                >3.9 GPA</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- div for second card -->
+        <div class="flex justify-end">
+          <!-- card2 -->
+          <div
+            class="p-6 rounded-xl border border-[#FE9A00] shadow-[-10px_-10px_30px_5px_rgba(254,154,0,0.45)]"
+          >
+            <h3 class="text-lg text-white font-semibold mt-1 text-gray-800">
+              Master of Science in Software Engineering
+            </h3>
+            <p class="text-gray-400">MIT, Massachusetts</p>
+            <p class="text-gray-400 text-sm mt-4">
+              Specialized in Machine Learning and Distributed Systems.
+            </p>
+            <div class="mt-4 flex justify-between items-center pt-4">
+              <span
+                class="text-xs font-robotoMono font-bold text-[#FE9A00] uppercase tracking-wider"
+                >2022 - 2024</span
+              >
+              <span
+                class="text-sm p-2 border border-[#FE9A00] rounded-md text-[#FE9A00]"
+                >4.0 GPA</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- div for third card -->
+        <div class="flex items-start">
+          <!-- card3 -->
+          <div
+            class="p-6 rounded-xl border border-[#FE9A00] shadow-[10px_10px_30px_5px_rgba(254,154,0,0.45)]"
+          >
+            <h3 class="text-lg text-white font-semibold mt-1 text-gray-800">
+              AWS Certified Solutoins Architect
+            </h3>
+            <p class="text-gray-400">Amazon Web Services, Online</p>
+            <p class="text-gray-400 text-sm mt-4">
+              Advanced Cloud Architecture and deployment strategies.
+            </p>
+            <div class="mt-4 flex justify-between items-center pt-4">
+              <span
+                class="text-xs font-robotoMono font-bold text-[#FE9A00] uppercase tracking-wider"
+                >2013</span
+              >
+              <span
+                class="text-sm p-2 border border-[#FE9A00] rounded-md text-[#FE9A00]"
+                >Professional</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- section for testimonials -->
+    <section id="testimonials" class="px-8 md:px-20 py-16 md:py-32">
+      <!-- top div for headings -->
+      <div class="flex flex-col items-center">
+        <div
+          class="flex items-center justify-center bg-[#FE9A00]/20 w-48 h-10 rounded-lg gap-2 border-l-4 border-[#FE9A00] mb-5"
+        >
+          <i class="fa-solid fa-star text-[#FE9A00]"></i>
+          <p class="text-[#FE9A00]">TESTIMONIALS</p>
+        </div>
+
+        <h2 class="text-3xl font-bold mb-10 text-white tracking-widest">
+          CLIENT
+          <span class="text-[#FE9A00] tracking-widest pb-5">REWIEWS</span>
+        </h2>
+      </div>
+
+      <!-- responsive testimonials cards container -->
+      <div class="flex flex-col lg:flex-row items-center gap-5">
+        <!-- first card -->
+        <div
+          class="flex flex-col items-start gap-3 p-2 border border-[#FE9A00] rounded-lg"
+        >
+          <div>
+            <label><i class="fa-solid fa-star text-[#FE9A00]"></i></label>
+            <label><i class="fa-solid fa-star text-[#FE9A00]"></i></label>
+            <label><i class="fa-solid fa-star text-[#FE9A00]"></i></label>
+            <label><i class="fa-solid fa-star text-[#FE9A00]"></i></label>
+            <label><i class="fa-solid fa-star text-[#FE9A00]"></i></label>
+          </div>
+
+          <p class="text-sm text-gray-400">
+            "Working with Hanan was an absolute pleasure. His technical
+            expertise and attention to detail resulted in a product that
+            exceeded our expectations."
+          </p>
+
+          <div class="flex items-center gap-3">
+            <label
+              class="text-[#FE9A00] border-2 border-[#FE9A00] rounded-full"
+            >
+              <img
+                src="images/sarah.jpg"
+                alt="sarah"
+                class="h-10 w-10 rounded-full"
+              />
+            </label>
+            <div>
+              <h1 class="text-white font-bold">Sarah Johnson</h1>
+              <p class="text-gray-400 text-xs">CEO, Techstart Inc.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- second card -->
+        <div
+          class="flex flex-col items-start gap-3 p-2 border border-[#FE9A00] rounded-lg"
+        >
+          <div>
+            <label><i class="fa-solid fa-star text-[#FE9A00]"></i></label>
+            <label><i class="fa-solid fa-star text-[#FE9A00]"></i></label>
+            <label><i class="fa-solid fa-star text-[#FE9A00]"></i></label>
+            <label><i class="fa-solid fa-star text-[#FE9A00]"></i></label>
+          </div>
+
+          <p class="text-sm text-gray-400">
+            "Hanan's ability to translate complex requirements into elegant
+            solution is remarkable. He delivered our project ahead of schedule
+            with exceptional quality."
+          </p>
+
+          <div class="flex items-center gap-3">
+            <label
+              class="text-[#FE9A00] border-2 border-[#FE9A00] rounded-full"
+            >
+              <img
+                src="images/michael.jpg"
+                alt="sarah"
+                class="h-10 w-10 rounded-full"
+              />
+            </label>
+            <div>
+              <h1 class="text-white font-bold">Michael Chen</h1>
+              <p class="text-gray-400 text-xs">CTO, Dataflow</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- third card -->
+        <div
+          class="flex flex-col items-start gap-3 p-2 border border-[#FE9A00] rounded-lg"
+        >
+          <div>
+            <label><i class="fa-solid fa-star text-[#FE9A00]"></i></label>
+            <label><i class="fa-solid fa-star text-[#FE9A00]"></i></label>
+            <label><i class="fa-solid fa-star text-[#FE9A00]"></i></label>
+            <label><i class="fa-solid fa-star text-[#FE9A00]"></i></label>
+            <label><i class="fa-solid fa-star text-[#FE9A00]"></i></label>
+          </div>
+
+          <p class="text-sm text-gray-400">
+            "His collaborative approach and communication skills make him stand
+            out. John is not just a developer, he's a true problem solver."
+          </p>
+
+          <div class="flex items-center gap-3">
+            <label
+              class="text-[#FE9A00] border-2 border-[#FE9A00] rounded-full"
+            >
+              <img
+                src="images/emily.jpg"
+                alt="sarah"
+                class="h-10 w-10 rounded-full"
+              />
+            </label>
+            <div>
+              <h1 class="text-white font-bold">Emily Rodriguez</h1>
+              <p class="text-gray-400 text-xs">Product Manager, CloudSync</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- section for contact -->
+    <section id="contact" class="px-8 md:px-20 py-16 md:py-32">
+      <!-- top div for headings -->
+      <div class="flex flex-col items-center">
+        <div
+          class="flex items-center justify-center bg-[#FE9A00]/20 w-48 h-10 rounded-lg gap-2 border-l-4 border-[#FE9A00] mb-5"
+        >
+          <i class="fa-solid fa-envelope text-[#FE9A00]"></i>
+          <p class="text-[#FE9A00]">CONTACT</p>
+        </div>
+
+        <h2 class="text-3xl font-bold mb-10 text-white tracking-widest">
+          LET'S
+          <span class="text-[#FE9A00] tracking-widest pb-5">CONNECT</span>
+        </h2>
+      </div>
+
+      <!-- div for contact cards and form -->
+      <div class="flex flex-col lg:flex-row justify-between gap-10">
+        <!-- left div for contact cards -->
+        <div class="flex flex-col gap-6 w-full">
+          <!-- card 1 -->
+          <div
+            class="w-full rounded-2xl border-l-8 border border-[#FE9A00] p-6 flex items-center gap-4 hover:shadow-md transition"
+          >
+            <div class="text-[#FE9A00] text-2xl">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div>
+              <h3 class="text-gray-400 text-xs">EMAIL</h3>
+              <p class="text-white font-bold">khnhanan5@gmail.com</p>
+            </div>
+          </div>
+
+          <!-- card 2 -->
+          <div
+            class="w-full rounded-2xl border-l-8 border border-[#FE9A00] p-6 flex items-center gap-4 hover:shadow-md transition"
+          >
+            <div class="text-[#FE9A00] text-2xl">
+              <i class="fa-solid fa-location-arrow"></i>
+            </div>
+            <div>
+              <h3 class="text-gray-400 text-xs">LOCATION</h3>
+              <p class="text-white font-bold">San Francisco, CA</p>
+            </div>
+          </div>
+
+          <!-- card 3 -->
+          <div
+            class="w-full rounded-2xl border-l-8 border border-[#FE9A00] p-6 flex items-center gap-4 hover:shadow-md transition"
+          >
+            <div class="text-[#FE9A00] text-2xl">
+              <i class="fa-solid fa-globe"></i>
+            </div>
+            <div>
+              <h3 class="text-gray-400 text-xs">WEBSITE</h3>
+              <p class="text-white font-bold">hanan.dev</p>
+            </div>
+          </div>
+
+          <button
+            class="w-full bg-[#FE9A00] text-black py-3 rounded-lg font-semibold hover:opacity-90 transition"
+          >
+            DOWNLOAD RESUME
+          </button>
+        </div>
+
+        <!-- form -->
+        <form
+          action="#"
+          class="w-full rounded-2xl border border-[#FE9A00] p-6 md:p-8 space-y-5 transition hover:shadow-md"
+        >
+          <!-- name -->
+          <div>
+            <label class="block text-gray-200 text-xs mb-2">NAME</label>
+            <input
+              type="text"
+              placeholder="John Doe"
+              class="w-full bg-transparent border border-gray-700 rounded-lg p-3 text-white focus:outline-none focus:border-[#FE9A00] transition"
+            />
+          </div>
+
+          <!-- email -->
+          <div>
+            <label class="block text-gray-200 text-xs mb-2">EMAIL</label>
+            <input
+              type="email"
+              placeholder="john@example.com"
+              class="w-full bg-transparent border border-gray-700 rounded-lg p-3 text-white focus:outline-none focus:border-[#FE9A00] transition"
+            />
+          </div>
+
+          <!-- message -->
+          <div>
+            <label class="block text-gray-200 text-xs mb-2">MESSAGE</label>
+            <textarea
+              rows="4"
+              placeholder="Your Message..."
+              class="w-full bg-transparent border border-gray-700 rounded-lg p-3 text-white resize-none focus:outline-none focus:border-[#FE9A00] transition"
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full bg-[#FE9A00] text-black py-3 rounded-lg font-semibold hover:opacity-90 transition"
+          >
+            SEND MESSAGE
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- footer section -->
+    <footer>
+      <div
+        class="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-10 p-10"
+      >
+        <!-- first card -->
+        <div class="px-5 p-5 flex flex-col gap-2">
+          <div class="flex gap-2">
+            <!-- svg logo -->
+            <div class="relative w-8 h-8 flex items-center justify-center">
+              <svg
+                viewBox="0 0 100 100"
+                class="absolute inset-0 w-full h-full fill-none stroke-[#FE9A00]"
+                style="stroke-width: 8"
+              >
+                <path
+                  d="M50 5 L89 27.5 L89 72.5 L50 95 L11 72.5 L11 27.5 Z"
+                  stroke-linejoin="round"
+                  stroke-linecap="round"
+                />
+              </svg>
+              <span
+                class="relative z-10 text-[#FE9A00] text-sm font-semibold tracking-wide"
+              >
+                HK
+              </span>
+            </div>
+
+            <!-- name and title -->
+            <div class="flex flex-col">
+              <h1 class="font-bold text-white">HANAN KHAN</h1>
+              <p class="font-thin text-xs text-[#E0E7FF]">ELITE DEVELOPER</p>
+            </div>
+          </div>
+
+          <p class="text-xs text-gray-400">
+            Driving Excellence in Every Line of Code
+          </p>
+        </div>
+
+        <!-- second card -->
+        <div class="p-6 w-full md:w-64 h-56 flex flex-col justify-start gap-3">
+          <h1 class="font-bold text-[#FE9A00] mb-2">QUICK LINKS</h1>
+
+          <a
+            href="#about"
+            class="text-gray-400 hover:text-[#FE9A00] transition"
+          >
+            About
+          </a>
+          <a
+            href="#skills"
+            class="text-gray-400 hover:text-[#FE9A00] transition"
+          >
+            Skills
+          </a>
+          <a
+            href="#projects"
+            class="text-gray-400 hover:text-[#FE9A00] transition"
+          >
+            Projects
+          </a>
+          <a
+            href="#contact"
+            class="text-gray-400 hover:text-[#FE9A00] transition"
+          >
+            Contact
+          </a>
+        </div>
+
+        <!-- third card -->
+        <div class="px-5 p-5 flex flex-col gap-2">
+          <h1 class="font-bold text-[#FE9A00]">CONNECT</h1>
+
+          <div class="flex items-center gap-5">
+            <a
+              href="https://github.com/KnowMe777"
+              class="text-white font-bold text-2xl"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/5-hanan-khan/"
+              class="text-white font-bold text-2xl"
+            >
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+
+            <a href="https://x.com/" class="text-white font-bold text-2xl">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
